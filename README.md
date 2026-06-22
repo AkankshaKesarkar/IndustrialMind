@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green?logo=fastapi)
+![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-orange)
+![Claude](https://img.shields.io/badge/LLM-Claude%203.5-blueviolet?logo=anthropic)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # IndustrialMind — AI Knowledge Intelligence Platform
 
 IndustrialMind is a full-stack, RAG-powered knowledge intelligence system built for manufacturing plants and heavy industrial environments. It enables safety officers, technicians, and plant managers to instantly query maintenance logs, safety guidelines (OISD), and factory regulations (Indian Factories Act 1948), receiving accurate answers with verified page/row-level source citations.

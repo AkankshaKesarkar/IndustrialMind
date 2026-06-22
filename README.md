@@ -1,3 +1,4 @@
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green?logo=fastapi)
 ![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react)
@@ -5,6 +6,10 @@
 ![Claude](https://img.shields.io/badge/LLM-Claude%203.5%20Sonnet-blueviolet?logo=anthropic)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Hackathon](https://img.shields.io/badge/ET%20AI%20Hackathon%202.0-Finalist-ff6b35)
+
+## 🏆 Hackathon
+Built for ET AI Hackathon 2.0 — Problem Statement 8: 
+AI for Industrial Knowledge Intelligence
 
 <h1 align="center">
   <img src="https://img.shields.io/badge/⚙️-IndustrialMind-00d4aa?style=for-the-badge&labelColor=0d1117" alt="IndustrialMind"/>

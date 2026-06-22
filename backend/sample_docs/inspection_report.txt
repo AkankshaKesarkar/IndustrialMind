@@ -1,0 +1,34 @@
+QUARTERLY PLANT COMPLIANCE AND SAFETY INSPECTION REPORT
+Plant: IndustrialMind Unit 4
+Inspection Reference: INSP-2026-Q1
+Inspection Date: 2026-02-28
+Auditor: Ramesh Chandra (Lead Safety Auditor)
+Regulatory Reference: Indian Factories Act 1948, Section 36 and Section 38
+
+EXECUTIVE SUMMARY
+An inspection of Unit 4 was carried out to assess compliance with the Factories Act 1948 and internal safety guidelines. Overall compliance rating is Conditional Acceptable. Several safety deviations require immediate corrective action.
+
+DETAILED FINDINGS AND DEVIATIONS
+
+Deviation 1: Lack of proper pressure testing documentation for steam boiler TAG-001.
+Location: Boiler House A
+Severity: High
+Detail: Section 31 of the Factories Act 1948 requires pressure vessels to be certified by a competent person annually. The latest inspection record for TAG-001 was dated January 2025, which exceeds the 12-month limit.
+Corrective Action: Schedule third-party hydro-test certification immediately and update records.
+
+Deviation 2: Emergency escape route obstruction.
+Location: Near feed pump station housing TAG-002.
+Severity: Medium
+Detail: Spare metal pipes and structural steel plates were stacked in front of the emergency fire exit door. This violates Section 38 of the Factories Act 1948.
+Corrective Action: Relocate metal piping to salvage yard. Fire exit route cleared during audit.
+
+Deviation 3: Confined space gas monitoring logs missing.
+Location: Storage Tank TK-502 Area
+Severity: High
+Detail: Standard operating procedures require daily logs of gas levels before entry. Two entry permit sheets did not have the pre-entry toxic gas measurements recorded.
+Corrective Action: Retrain supervisors on Confined Space Entry permit process. Conduct random inspections weekly.
+
+RE-AUDIT SCHEDULE
+A follow-up inspection is scheduled for 2026-04-15 to check compliance status and confirm all deviations are closed.
+
+END OF REPORT

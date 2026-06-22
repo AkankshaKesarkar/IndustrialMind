@@ -1,0 +1,25 @@
+STANDARD OPERATING PROCEDURE: CONFINED SPACE ENTRY
+Document Reference: SOP-SAF-042
+Version: 4.2
+Effective Date: 2026-01-15
+Regulatory Standard: OISD-GDN-137 (Oil Industry Safety Directorate Guidelines)
+
+PURPOSE AND SCOPE
+This document outlines the safety requirements for entry, working, and exit from confined spaces such as vessels, storage tanks, pits, and boilers like TAG-001 under OISD-GDN-137 compliance protocols.
+
+HAZARD IDENTIFICATION
+Confined spaces contain major hazards including oxygen deficiency below 19.5% by volume, accumulation of toxic gases such as CO and H2S, flammable hydrocarbons, enveloping materials, mechanical hazards from agitators, and physical hazards such as heat exhaustion, poor lighting, slips, and falls.
+
+PRE-ENTRY PROCEDURE AND PERMIT REQUIREMENTS
+A valid Confined Space Entry Permit (Form SF-02) must be signed by the Area Manager before any personnel enters the space. The space must be completely isolated. Close and blind all inlet and outlet lines. Apply Lockout and Tagout on electric drives. Perform air quality testing using calibrated multi-gas detectors. Gas test must be performed 10 minutes prior to entry. Active mechanical ventilation using air blower EQ-104 must run continuously.
+
+ENTRY LOG AND ATTENDANT ROLES
+A dedicated Standby Attendant must be positioned outside the entry point at all times. The attendant must maintain a log of all personnel entering and exiting with exact times. The attendant must have communication devices and emergency rescue gear including scuba kit and tripod harness. The attendant must not enter the space to rescue personnel under any circumstances without backup and personal breathing apparatus.
+
+EMERGENCY AND EVACUATION PROTOCOLS
+In case of alarm, or if the entrant exhibits signs of disorientation, the Standby Attendant must immediately initiate evacuation. Call the emergency control room at Extension 555 immediately. Use the rescue tripod to extract the entrant if they are wearing the rescue harness. Do not attempt manual extraction without proper equipment.
+
+COMPLIANCE AND REVIEW
+This procedure is reviewed annually and updated in accordance with OISD-GDN-137 and the Factories Act 1948. Non-compliance must be reported to the Safety Officer within 24 hours.
+
+END OF SAFETY PROCEDURE

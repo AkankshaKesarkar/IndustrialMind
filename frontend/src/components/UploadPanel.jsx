@@ -3,7 +3,31 @@ import React, { useState, useRef } from 'react';
 export default function UploadPanel({ documents, onUploadSuccess }) {
   const [dragActive, setDragActive] = useState(false);
   const [uploadingFile, setUploadingFile] = useState(null); // { name, progress, status: 'uploading' | 'indexing' | 'success' | 'error', message }
+  const [clearing, setClearing] = useState(false);
   const fileInputRef = useRef(null);
+
+  const handleClearDb = async () => {
+    if (!window.confirm("Are you sure you want to clear all indexed documents from the vector database?")) {
+      return;
+    }
+    setClearing(true);
+    try {
+      const response = await fetch('http://localhost:8000/documents/clear', {
+        method: 'POST'
+      });
+      if (response.ok) {
+        if (onUploadSuccess) {
+          onUploadSuccess();
+        }
+      } else {
+        alert("Failed to clear database.");
+      }
+    } catch (err) {
+      alert("Error connecting to server.");
+    } finally {
+      setClearing(false);
+    }
+  };
 
   // Handle drag events
   const handleDrag = (e) => {
@@ -214,6 +238,28 @@ export default function UploadPanel({ documents, onUploadSuccess }) {
               </div>
             ))}
           </div>
+        )}
+        {documents.length > 0 && (
+          <button 
+            onClick={handleClearDb}
+            disabled={clearing}
+            style={{
+              marginTop: '1rem',
+              background: 'rgba(255, 26, 102, 0.1)',
+              border: '1px solid rgba(255, 26, 102, 0.2)',
+              color: 'hsl(var(--accent-red))',
+              fontSize: '0.75rem',
+              padding: '0.5rem',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              fontWeight: 600,
+              width: '100%',
+              transition: 'all 0.2s',
+              fontFamily: 'Inter, sans-serif'
+            }}
+          >
+            {clearing ? 'Clearing Database...' : '🗑️ Clear Database'}
+          </button>
         )}
       </div>
     </div>

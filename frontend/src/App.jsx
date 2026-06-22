@@ -7,6 +7,7 @@ import './App.css';
 export default function App() {
   const [activeTab, setActiveTab] = useState('chat'); // 'chat' | 'graph'
   const [documents, setDocuments] = useState([]);
+  const [isClaudeConnected, setIsClaudeConnected] = useState(false);
 
   // Fetch all ingested documents from the backend
   const fetchDocuments = async () => {
@@ -23,8 +24,22 @@ export default function App() {
     }
   };
 
+  // Fetch API configuration status
+  const fetchConfig = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/config');
+      if (response.ok) {
+        const data = await response.json();
+        setIsClaudeConnected(data.api_key_configured);
+      }
+    } catch (error) {
+      console.error('Error connecting to config API:', error);
+    }
+  };
+
   useEffect(() => {
     fetchDocuments();
+    fetchConfig();
   }, []);
 
   const handleUploadSuccess = () => {
@@ -39,6 +54,13 @@ export default function App() {
         <div className="logo-container">
           <div className="logo-icon"></div>
           <h1 className="logo-text">Industrial<span>Mind</span></h1>
+          <span 
+            className={`status-pill ${isClaudeConnected ? 'online' : 'offline'}`}
+            title={isClaudeConnected ? 'Claude 3.5 Sonnet Connected' : 'Local Offline Engine (No API Key Required)'}
+          >
+            <span className="status-dot"></span>
+            {isClaudeConnected ? 'Claude Online' : 'Local Offline RAG'}
+          </span>
         </div>
         
         {/* Navigation Tabs */}

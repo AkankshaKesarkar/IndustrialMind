@@ -1,5 +1,5 @@
 :root {
-   font-family: 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -347,15 +347,13 @@ body {
 }
 
 .bubble-content {
-  .chat-bubble.assistant .bubble-content {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  color: hsl(210, 40%, 96%);
-  border-bottom-left-radius: 4px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1rem;
-  line-height: 1.9;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
 }
+
 .chat-bubble.user .bubble-content {
   background: linear-gradient(135deg, hsl(var(--accent-blue)), hsla(var(--accent-blue), 0.7));
   color: #ffffff;
@@ -684,3 +682,41 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
 }
+
+/* Navbar Config Status Pill */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 20px;
+  margin-left: 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.status-pill.online {
+  color: hsl(var(--accent-green));
+  border-color: hsla(var(--accent-green), 0.2);
+  background: hsla(var(--accent-green), 0.05);
+}
+
+.status-pill.offline {
+  color: hsl(var(--accent-cyan));
+  border-color: hsla(var(--accent-cyan), 0.2);
+  background: hsla(var(--accent-cyan), 0.05);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+  animation: pulse-badge 1.5s infinite ease-in-out;
+}
+

@@ -34,6 +34,16 @@ class QueryRequest(BaseModel):
 def read_root():
     return {"status": "running", "service": "IndustrialMind API"}
 
+@app.get("/config")
+def get_config():
+    """
+    Check if the Anthropic Claude API Key is configured.
+    """
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    is_configured = bool(api_key and api_key != "your_key_here")
+    return {"api_key_configured": is_configured}
+
+
 @app.post("/upload")
 async def upload_document(file: UploadFile = File(...)):
     """
@@ -158,5 +168,21 @@ async def get_entities():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate entities data: {str(e)}")
 
+@app.post("/documents/clear")
+async def clear_documents():
+    """
+    Clears all documents and vectors from the ChromaDB collection.
+    """
+    try:
+        collection = embeddings.get_collection()
+        data = collection.get()
+        if data and data.get("ids"):
+            collection.delete(ids=data["ids"])
+            return {"status": "success", "message": f"Successfully cleared {len(data['ids'])} chunks from database."}
+        return {"status": "success", "message": "Database is already empty."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to clear database: {str(e)}")
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
